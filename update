@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuantumCat ($QCAT)</title>
+  <style>
+    /* Dark Space Background */
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #0d0d2b;
+      overflow-x: hidden;
+    }
+    /* Starfield Canvas */
+    #starfield {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    /* Main Content Styles */
+    body {
+      position: relative;
+      z-index: 1;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      padding: 60px 20px 120px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(to bottom, rgba(13,13,43,0.9) 0%, rgba(13,13,43,0.4) 100%);
+    }
+
+    .header-content {
+      margin-top: 80px;
+      max-width: 800px;
+      position: relative;
+    }
+
+    .logo {
+      width: 150px;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      border-radius: 50%;
+      border: 3px solid #ffcc00;
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    header p {
+      font-size: 1.5rem;
+      color: #ffcc00;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      position: relative;
+      background: rgba(13,13,43,0.9);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      padding: 15px 40px;
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: transform 0.3s ease;
+      z-index: 2;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+
+    .tokenomics, .roadmap, .lore {
+      background: #1c1c3c;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px #333;
+    }
+
+    footer {
+      background: rgba(11,11,32,0.9);
+      color: #ccc;
+      padding: 30px 20px;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      padding: 8px 15px;
+      border-radius: 20px;
+      background: rgba(255, 204, 0, 0.1);
+    }
+
+    footer a:hover {
+      background: rgba(255, 204, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      
+      .logo {
+        width: 100px;
+      }
+      
+      .header-content {
+        margin-top: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Starfield Background -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Website Content -->
+  <header>
+    <img src="https://i.imgur.com/lgJG2fz.jpeg" alt="QuantumCat Logo" class="logo" />
+    <div class="header-content">
+      <h1>QuantumCat ($QCAT)</h1>
+      <p>The Meme That Leaps Through Dimensions</p>
+      <button class="cta-button" onclick="window.location='https://t.me/quantumcatofficial'">Join the Clowder</button>
+    </div>
+  </header>
+  <!-- All Content Sections -->
+  <section class="section">
+    <h2>What is QuantumCat?</h2>
+    <p>
+      Imagine a cat that exists in two states at once—mooning to the stars and chilling in the void—until you observe it. 
+      Welcome to QuantumCat ($QCAT), a Solana-based memecoin where quantum mechanics meets meme magic, and 10% of the supply fuels real-world quantum research.
+    </p>
+    <p>
+      $QCAT is more than just a memecoin—it’s a cosmic experiment, capturing Solana's meme energy while funding science. 
+      Inspired by Schrödinger’s Cat, it’s a moon-bound rocket and a chill community token in one. 
+      Total supply: 1 quadrillion. 10% fuels the Paw Pool Reserve for quantum research.
+    </p>
+  </section>
+
+  <section class="section tokenomics">
+    <h2>Tokenomics</h2>
+    <p>Total Supply: 1,000,000,000,000,000 QCAT</p>
+    <p>10% Paw Pool Reserve for quantum research</p>
+    <p>90% Community + Liquidity + Exchanges</p>
+  </section>
+
+  <section class="section roadmap">
+    <h2>The Legend of QuantumCat</h2>
+    <p>
+      In the quantum meme-verse, a cosmic feline was born—QuantumCat. Forged from stardust, it exists in superposition: chaos and harmony, rocket and nap. 
+      It doesn’t sit in a box—it leaps dimensions, chases Purrticles, and brings quantum mischief to all.
+    </p>
+  </section>
+
+  <section class="section lore">
+    <h2>The QuantumCat Chronicles</h2>
+    <h3>The Legend of QuantumCat: A Tale of Superposition and Stardust</h3>
+    <h4>The Origin</h4>
+    <p>
+      In the infinite expanse of the quantum meme-verse, where probabilities dance and reality bends, a cosmic feline was born: QuantumCat.
+      Forged from the stardust of a collapsing nebula, QuantumCat was no ordinary cat—it was a being of pure superposition, existing in a state of both chaos and harmony.
+      Its neon-blue fur glowed with the energy of quantum waves, and its eyes sparkled with the secrets of the universe.
+      Legend has it that QuantumCat was inspired by Schrödinger’s Cat, a thought experiment that puzzled scientists for centuries.
+      But QuantumCat wasn’t content to sit in a box—it wanted to leap through dimensions, chase quantum Purrticles, and bring its cosmic mischief to the world.
+    </p>
+    <h4>The Discovery</h4>
+    <p>
+      In the year 2025, as quantum computing breakthroughs dominated headlines, a group of Solana degens stumbled upon QuantumCat’s digital pawprints in the blockchain.
+      They called themselves the Quantum Pioneers—visionaries like NeonFurryon, PawPoolMaster, and SuperpositionSage—who saw the potential to harness QuantumCat’s energy into a memecoin that could change the game.
+      They named it $QCAT and set out to build a community worthy of its cosmic legacy: the Clowder.
+    </p>
+    <h4>The Prophecy</h4>
+    <p>
+      The QuantumCat Chronicles speak of a prophecy: when the Clowder grows strong enough, $QCAT will achieve a state of Meowtanglement so powerful that it transcends the blockchain.
+      Its Paw Pool Reserve will fund a quantum breakthrough that changes the world—perhaps a new algorithm, a quantum computer, or even a way to teleport catnip across dimensions.
+      Until then, QuantumCat roams the Solana ecosystem, its neon tail leaving trails of stardust, inviting all who dare to join its cosmic dance.
+    </p>
+    <h4>The Clowder’s Role</h4>
+    <p>
+      Every member of the Clowder is part of this legend. Whether you’re Quantum Scratching memes, earning Quantum Nip NFTs, or voting as a Paw Pooler,
+      you’re helping QuantumCat fulfill its destiny. The Quantum Pioneers lead the way, but the Clowder’s Meowtanglement is the true force
+      that will collapse the quantum uncertainty into a reality where $QCAT reigns supreme.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Join the Quantum Leap</h2>
+    <p>Every member of the Clowder is part of this legend. Time to leap.</p>
+    <button class="cta-button" onclick="window.location='https://t.me/quantumcatofficial'">Join the Telegram</button>
+  </section>
+
+  <footer>
+    <p>© 2025 QuantumCat ($QCAT)</p>
+    <p>
+      <a href="https://x.com/qcatsolana/" target="_blank" rel="noopener">Twitter</a>
+      |
+      <a href="https://t.me/quantumcatofficial" target="_blank" rel="noopener">Telegram</a>
+    </p>
+  </footer>
+
+  <!-- Starfield Animation Script -->
+  <script>
+    const canvas = document.getElementById('starfield');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+    const numStars = 400;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Initialize stars
+    for (let i = 0; i < numStars; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        z: Math.random() * canvas.width,
+      });
+    }
+
+    function draw() {
+      ctx.fillStyle = '#0d0d2b';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      stars.forEach(star => {
+        star.z -= 2;
+        if (star.z <= 0) {
+          star.x = Math.random() * canvas.width;
+          star.y = Math.random() * canvas.height;
+          star.z = canvas.width;
+        }
+
+        const k = 128.0 / star.z;
+        const px = star.x * k + canvas.width / 2;
+        const py = star.y * k + canvas.height / 2;
+
+        if (px >= 0 && px <= canvas.width && py >= 0 && py <= canvas.height) {
+          const size = (1 - star.z / canvas.width) * 2;
+          const brightness = 1 - star.z / canvas.width;
+          ctx.fillStyle = `rgba(255, 204, 0, ${brightness*0.6})`;
+          ctx.beginPath();
+          ctx.arc(px, py, size, 0, 2 * Math.PI);
+          ctx.fill();
+        }
+      });
+
+      requestAnimationFrame(draw);
+    }
+
+    draw();
+  </script>
+</body>
+</html>
